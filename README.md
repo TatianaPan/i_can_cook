@@ -1,24 +1,30 @@
-# README
+# I_CAN_COOK_APP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This prototype has been developed during Hackday at @simplificator.
 
-Things you may want to cover:
+## Problem
 
-* Ruby version
+I know that I can cook 30-40 dishes. But I don't remember them all by heart and sometimes I struggle trying to get an idea what to cook. At the same time I don't want to surf through internet looking for any new recipes - I want to cook what I can. 
 
-* System dependencies
+## Solution
+The idea is that user can create a list of dishes that he can cook and render them by categories (breakfast, lunch, dinner) and by time of cooking: less than 30 min, 30-60 min, more than 60 min.
 
-* Configuration
+## Project setup
 
-* Database creation
+- Clone repo
 
-* Database initialization
+```bash
+# this includes the postgres client (required for gem pg)
+brew install postgresql
 
-* How to run the test suite
+# includes `bundle install` and `db:setup`
+bin/setup
 
-* Services (job queues, cache servers, search engines, etc.)
+yarn install --check-files
 
-* Deployment instructions
+rails db:migrate
 
-* ...
+bin/rails server
+```
+
+- Navigate to localhost:3000

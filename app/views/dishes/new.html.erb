@@ -1,0 +1,29 @@
+<div class='container'>
+  <h1>Add new dish</h1>
+
+  <%= form_with scope: :dish, url: dishes_path, local: true do |form| %>
+    <p class="form-group">
+      <%= form.label :title %><br>
+      <%= form.text_field :title, :class => "form-control" %>
+    </p>
+  
+    <p class="form-group">
+      <%= form.label :description %><br>
+      <%= form.text_area :description, :class => "form-control" %>
+    </p>
+
+    <p class="form-group">
+      <%= form.label :category %><br>
+      <%= form.select :category, [ 'Breakfast', 'Lunch', 'Dinner' ], :prompt => 'Meal Type', :class => "form-control" %>
+    </p>
+
+    <p class="form-group">
+     
+      <%= form.select :duration, [ 'less than 30 min', '30-60 min', 'more then 30 min' ], :prompt => 'Cooking Time', :class => "form-control" %>
+    </p>
+  
+    <p class="form-group">
+      <%= form.submit :class => "btn btn-primary btn-lg" %>
+    </p>
+  <% end %>
+</div>
